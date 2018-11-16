@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The first single application for the entire DevOps lifecycle - GitLab | GitLab</title>
+		<link rel="stylesheet" type="text/css" href="word.css"/><!--外部css-->
+	</head>
+	<style>
+		body {
+		  margin:0;
+		  padding: 0;
+		  background-color: #F9F9F9;
+		  font-family: segoe ui;
+		  }
+		.leader {/*头部导航栏*/
+			z-index: 50;/*显示在其他上方*/
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			top: auto;
+		 	width: 100%;
+		 	height: 60px;
+            position: fixed;
+            top: -17px;
+	 	  }
+	    .leader ul {
+          list-style-type: none;/*去掉小圆点*/
+          margin: 0px;
+          padding: 0px;
+          background-color: white;
+          height: 60px;
+          box-shadow: 2px 2px rgba(221, 221, 221, 1);/*阴影部分*/
+          }
+        .leader li {/*使导航栏水平*/
+          float: right;
+          }
+        .leader li a {
+          display: block;/*让整体变为可链接区域*/
+          color: #828282;
+          text-align: center;
+          padding: 14px 14px; 
+          text-decoration: none;
+          }
+        .leader li a:hover {/*鼠标移入效果*/
+         background-color: #F2F2F2;
+          }
+        .first {
+        	display: block;
+        	width: 100%;
+        	height: 650px;
+        	background: url(mountains.png) no-repeat -100px 110px,url(sky.jpg) no-repeat -120px 0px;/*两张图片合为背景图片*/
+        	background-size: 1640px;
+        }
+        #number {
+        	color: white;
+        	font-size: 200px;
+            margin: 0px;
+            text-align: center;  
+            font-family: 华文中宋; 
+            position: absolute;
+            top: 30px;     
+            left: 33%;
+        }
+        #word-a {
+        	position: absolute;
+        	top: 250px;
+        	left: 35%;
+        	color: white;
+        	font-family: segoe ui;
+        	font-size: 40px;
+        	text-align: center;
+        }
+        #word-b {
+        	position: absolute;
+        	top: 348px;
+        	left: 22%;
+        	color: white;
+        	font-family: segoe ui;
+        	font-size: 20px;
+        	text-align: center;
+        }
+        #button-a a{
+        	font-weight: 500;
+        	z-index: 40;
+        	text-decoration:none;  
+            background:white;  
+            color:red;  
+            padding: 15px 40px 15px 40px;  
+            font-size:15px;  
+            border-radius:5px;   
+           -webkit-transition:all linear 0.15s;/*动画生效时间*/
+            position: absolute;
+            top: 455px;
+            left: 43%;
+        }
+        #button-a a:hover {
+        	background:rgba(221, 221, 221, 1);
+        }
+        .second{
+        	width: 100%;
+        	height: 650px;
+        }
+        #left {
+        	width: 30%;
+        	height: 400px;
+        	position: absolute;
+        	top: 780px;
+        	left: 15%;
+        }
+        #middle {
+        	width: 30%;
+        	height: 400px;
+        	position: absolute;
+        	top: 780px;
+        	left: 41%;
+        	}
+        #right {
+        	width: 30%;
+        	height: 400px;
+        	position: absolute;
+        	top: 780px;
+        	left: 65%;
+        	}
+        #headline {
+        	font-size: 30px;
+        	font-family: segoe ui;
+        	font-weight: 600;
+        	position: absolute;
+        	top: 100px;
+        }
+        #word-c {font-style: italic;color: rgba(130, 130, 130, 1);}
+        .second ul {
+        	line-height: 35px;
+        	font-size: 18px;
+        }
+        .third {
+        	width: 100%;
+        	height: 650px;
+        }
+        #button a {
+            text-decoration:none;  /*去除下划线*/
+            background:rgba(107, 79, 187, 1);  
+            color:white;  
+            padding: 15px 35px 15px 35px;  
+            font-size:15px;  
+            border-radius:5px;   
+           -webkit-transition:all linear 0.15s;    
+            position: absolute;
+            top: 420px;
+            left: 90px;
+          }  
+        #button a:hover { 
+        	background:rgba(85, 68, 136, 1);color:rgba(221, 221, 221, 1);
+        }
+       .thirdmiddle {
+       	width: 75%;
+       	height: 500px;      
+       	background-color: white;
+       	position: absolute;
+       	top: auto;
+       	left: 10%;
+       }
+       #headline-b {
+       	width: 350px;
+       	font-size: 35px;
+       	color: #333333;
+       	font-weight: 600;
+       	position: absolute;
+       	left: 90px;
+       	top: 30px;
+       }
+       #word-e {
+       	width: 280px;
+       	position: absolute;
+       	left: 90px;
+       	top: 210px;
+       	line-height: 30px;
+       }
+       .last {
+       	width: 100%;
+       	height: 700px;
+       	background-color: rgba(107, 79, 187, 1);
+       	margin-bottom: 0px;
+       }
+       .picture {
+       	position: absolute;
+       	top: 1913px;
+       	left: 50%;
+       }
+       #a {left: 270px;}
+       #b {left: 470px;}
+       #c {left: 640px;}
+       #d {left: 820px;}
+       #e {left: 1000px;}
+       #f {left: 1180px;}
+       .last h1{
+       	color: white;
+       	font-size: 25px;
+       	font-weight: 600;/*文字粗细*/
+       }
+       .last a {
+       	color: white;
+       	text-decoration: none;
+       	-webkit-transition:all linear 0.15s;
+       }
+       .last a:hover{color: rgba(230, 83, 40, 1);}
+       .last p {
+       	color: white;
+       	font-weight: 500;
+       	font-size: 15px;
+       	line-height: 10px;
+       }
+       .foot {
+       	width: 100%;
+       	height: 40px;
+       	background-color: rgba(85, 68, 136, 1);
+        margin-top: 0px;
+       }
+       .foot a {
+        color: white;
+        text-decoration: ;
+       	-webkit-transition:all linear 0.15s;
+       }
+       .foot a:hover {text-decoration: none;}
+	</style>   
+	<body>
+		<div class="leader">
+				<ul>
+				  <p><img src="2.png" width="150px";height="150px" style="position: absolute;top: 19px;left: 65px;"></p>
+				  <li><a href="000" style="color: rgba(107, 79, 187, 1);">Register</a></li>
+				  <li><a href="000" style="color: rgba(107, 79, 187, 1);>Sign in</a></li>
+				  <li><a href="000">Get started</a></li>
+				  <li><a href="000">Is it any good?</a></li>
+				  <li><a href="000">DevOps lifecycle</a></li>
+				  <li><a href="000">Services</a></li>
+				  <li><a href="000">Solutions</a></li>
+				  <li><a href="000">Product</a></li>
+				  <li><a href="000">Why GitLab?</a></li>
+				</ul>
+			</div>
+		<div class="first">
+		<p id="number"><strong>11.4</strong></p>
+		<p id="word-a">New features every month</p>
+		<p id="word-b">This month’s release of GitLab 11.4 includes Merge Request Reviews, Feature Flags, Git protocol v2,<br> and much more! </p>
+		   <div id="button-a">
+              <a href="000">See what's new</a>
+    	   </div>
+		</div>
+		<div class="second">
+			<div id="left">
+				<p><img src="create.png" width="80px";height="80px"></p>
+				<p id="headline">Visible</p>
+				<div style="position: absolute;top: 170px;">
+				<p id="word-c">See everything that matters</p>
+				<ul><!--导航栏用到的列表-->
+					<li>stay in your flow</li>
+					<li>Don't wait on syncing</li>
+					<li>Manage projects,not tools</li>
+					<li>Improve cycle time</li>
+				</ul>
+				</div>
+			</div>
+			<div id="middle">
+				<p ><img src="Speed.png" width="80px";height="80px"></p>
+				<p id="headline">Efficient</p>
+				<div style="position: absolute;top: 165px;">
+				<p id="word-c">Collaborate without waiting </p>
+				<ul> 
+					<li>Start immediately</li>
+					<li>Work concurrently</li>
+					<li>No more handoffs</li>  
+				</ul>
+				</div>
+			</div>
+			<div id="right">
+				<p><img src="Scale.png" width="80px";height="80px"></p>
+				<p id="headline">Governed</p>
+				<div style="position: absolute;top: 160px;">
+				<p id="word-c">Develop and operate with confidence </p>
+				<ul>
+					<li>Security and compliance already built-in</li>
+					<li>Simplify user management</li>
+					<li>Expedite auditing</li>
+					<li>Act with certainty</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<div class="third">
+			<div class="thirdmiddle">
+				<p id="headline-b">The easiest way to deploy cloud native applications</p>
+				<p id="word-e">GitLab’s Kubernetes integration makes it easy to create and configure clusters. With Auto DevOps, GitLab automatically configures CI/CD pipelines to build, test, verify, and deploy applications to Kubernetes. </p>
+			    <img src="kubernetes.png" width="650px";height="650px" style="position: absolute;top:80px;left: 470px;"/>
+			    <div id="button">
+			    	<a href="000">Learn more</a>
+			    </div>
+			</div>
+		</div>
+		
+		<div class="last">
+			<div id="a">
+				<h1>Why GitLab?</h>
+				<br><br>
+				<p><a href="000">Product</a></p>
+				<p><a href="000">Solutions</a></p>
+				<p><a href="000">Services</a></p>
+				<p><a href="000">DevOps lifecycle</a></p>
+				<p><a href="000">DevOps tools</a></p>
+				<p><a href="000">Is it any good?</a></p>
+				<p><a href="000">Releases</a></p>
+				<p><a href="000">Pricing</a></p>
+				<p><a href="000">Get started</a></p>
+			</div>
+			<div id="b">
+				<h1>Resources</h>
+			    <br><br>
+				<p><a href="000">All resources</a></p>
+	            <p><a href="000">Blog</a></p>
+	            <p><a href="000">Newsletter</a></p>
+	            <p><a href="000">Events</a></p>
+	            <p><a href="000">Topics</a></p>
+	            <p><a href="000">Training</a></p>
+	            <p><a href="000">Docs</a></p>
+	            <p><a href="000">Install</a></p>
+			</div>      
+			<div id="c">
+				<h1>Community</h>
+				<br><br>
+                <p><a href="000">Customers</a></p>
+                <p><a href="000">Contribute</a></p>
+                <p><a href="000">Partners</a></p>
+                <p><a href="000">Resellers</a></p>
+                <p><a href="000">Explore repositories</a></p>
+                <p><a href="000">Source code</a></p>
+                <p><a href="000">Shop</a></p>
+                <p><a href="000">Direction</a></p>
+                <p><a href="000">Contributors</a></p>
+                <p><a href="000">Core Team</a></p>
+                <p><a href="000">Hall of fame</a></p>
+			</div>
+			<div id="d">
+				<h1>Support</h>
+				<br><br>
+				<p><a href="000">Get help</a></p>
+				<p><a href="000">Contact Sales</a></p>
+				<p><a href="000">Contact Support</a></p>
+				<p><a href="000">Support options</a></p>
+				<p><a href="000">Status</a></p>
+			</div>
+			<div id="e">
+				<h1>Pricing</h>
+				<br><br>
+				<p><a href="000">Free trial</a></p>
+				<p><a href="000">Self-managed</a></p>
+				<p><a href="000">GitLab.com</a></p>
+			</div>
+			<div id="f">
+				<h1>Company</h>
+				<br><br>
+				<p><a href="000">About</a></p>
+				<p><a href="000">What is GitLab?</a></p>
+				<p><a href="000">Jobs</a></p>
+				<p><a href="000">Culture</a></p>
+				<p><a href="000">Team</a></p>
+				<p><a href="000">Press</a></p>
+				<p><a href="000">Analysts</a></p>
+				<p><a href="000">Handbook</a></p>
+				<p><a href="000">Security</a></p>
+				<p><a href="000">Contact</a></p>
+				<p><a href="000">Terms</a></p>
+				<p><a href="000">Privacy</a></p>
+				<p><a href="000">Strategy</a></p>
+			</div>
+		</div>
+		<div class="picture"><img src="1.gif" width="70px";height="70px"></div>
+		<div class="foot">
+			<p style="position: absolute;top: 2642px;left: 40%;line-height: 20px;color: white;">Edit <a href="000"> page</a> — please <a href="000">contribute.</a></p>
+			<p style="position: absolute;top: 2642px;left: 55%;"><img src="by-sa.png"></p>
+		</div>
+	</body>
+</html>         

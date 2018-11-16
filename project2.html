@@ -1,0 +1,208 @@
+<!DOCTYPE.html><!--说明是HTML5文档-->
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <meta charset="utf-8"><!--网页编码格式-->
+  <title>Sign in·GitLab</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<style type="text/css">/*修改美化*/
+    body {
+    	margin: 0px;
+    	text-align: center;
+    	font-family: segoe ui;/*整体字体*/
+    	}
+    h1 {font-weight: 400;font-size: 34px;line-height: 170%;}
+    a {color:#1B69B6}/*链接颜色*/
+    a:hover {text-decoration:underline}/*移到链接上时变化*/
+    .header {/*头部固定,遮挡其他的*/
+    	z-index: 50;调整遮盖顺序
+        opacity: 1;
+        background-color: white;
+    	text-align: center;
+    	width: 100%;
+    	height: 41px;
+    	border-bottom: 1px solid #E5E5E5;
+    	margin: 0px;
+    	padding: 0px;
+    	position: fixed;/*固定*/
+    	top: 0px;
+    	left: 0px;
+    }
+    .foot { /*页脚*/ 	
+    	text-align: left;
+    	text-indent: 17em;/*文字前的空格*/
+    	z-index: 40;
+        opacity: 1;
+        width: 100%;
+        background-color: white;
+    	height: 41px;
+    	border-top: 1px solid #E5E5E5;
+    	margin: 0px;
+    	padding: 0px;
+    	position: absolute;/*绝对位置*/
+    	top: 945px;
+    	left: 0px;
+    }
+    .left {/*左侧区域*/
+    	z-index: 40;
+    	text-align: left;
+        width: 510px;
+        height: 800px;
+        position: absolute;
+        left:290px;
+        top: 95px;
+    	}
+    .right {/*右侧区域*/
+    	z-index: 40;
+   	  width: 400px;
+   	  height: 510px;
+   	  position: absolute;
+   	  left: 555px;
+   	  top: 22px;
+      }
+    table,th,td {/*表格整体的宽度和边框样式*/
+    	width: 374px;
+    	border: 1px solid #E5E5E5;
+    	border-collapse:collapse;
+    	border-top-right-radius: 4px 4px;
+    	border-top-left-radius:4px 4px;
+    	border-bottom-left-radius: 4px 4px;
+    	border-bottom-right-radius: 4px 4px;
+    }
+    th {height: 54px;/*首行*/
+        background-color: #FAFAFA;
+       }
+    form {text-align:left;line-height: 40px;position: absolute;left: 6%;top: 12%;}/*表单位置和距离*/
+    input {width:335px;height:35px;border: 1px solid #E5E5E5;
+           border-top-left-radius: 3px 3px;
+           border-top-right-radius: 3px 3px;
+           border-bottom-left-radius: 3px 3px;
+           border-bottom-right-radius: 3px 3px;}/*修改输入框样式*/
+    .button a {  大按钮
+       border: 1px solid #158845;
+       text-decoration:none;  
+       background:#1AAA55;  
+       color:white;  
+       padding: 0px 140px 0px 140px;  
+       font-size:15px;  
+       border-radius:5px;   
+       -webkit-transition:all linear 0.15s;    
+       position: absolute;
+       top: 497px;
+       left: -2px;
+          }  
+     .button a:hover { background:#168F48;color:#B8F4FF;}/*鼠标移入效果*/
+     .four a   {  /*四个小按钮样式*/
+        border: 1px solid #E5E5E5;
+        text-decoration:none;  
+        background:white;  
+        color:black;  
+        font-size:18px;  
+        border-radius:5px;   
+        -webkit-transition:all linear 0.15s;/*动画生效时间*/    
+          }  
+     .four a:hover {background-color: #E5E5E5;}?
+</style>
+<body>网页主体
+    <div class="header"><!--头部图片-->
+   	  <p><img src="1.gif" width="24" height="23"></p>
+    </div>
+    <div class="foot"><!--页脚链接-->
+    	<p><a href="000">Explore</a>&nbsp;&nbsp;&nbsp;
+    	   <a href="000">Help</a>&nbsp;&nbsp;
+    	   <a href="000">About GitLab</a>
+    	</p>
+    </div>
+    <div class="middle"><!--中间部分整体-->
+	<div class="left"><!--左侧-->
+     <h1>GitLab.com</h1>
+    
+     <p1 style="color:  #707070;">GitLab.com offers free unlimited (private) repositories and unlimited collaborators.</p1>
+
+     <p2 style="font-size: 19px;font-weight: 600;"> <ul><style>a{text-decoration: none}</style>
+               <li><a href="000">Explore projects on Gitlab.com</a>(no login needed)</li>         
+               <li><a href="000">More information about GitLab.com</a></li>            
+               <li><a href="000">Gitlab.com Support Forum</a></li>
+               <li><a href="000">GitLab Homepage</a></li>
+         </ul>
+     </p2>
+
+     <p3 style="color:  #707070;">By signing up for and by signing in to this service you accept our:</p3>
+
+     <p4 style="font-size: 19px;font-weight: 600;line-height: 14px;"> 
+     	<ul><!--无序列表-->
+                <li><a href="000">Privacy policy</a></li>
+                <br>
+                <li><a href="000">GitLab.com Terms.</a></li>
+         </ul>
+    </p4>
+    <div class="right"><!--右侧-->
+    <table><!--表格-->
+    	<tr>
+    		<th style="border-bottom: 2px solid #E5E5E5;font-weight: normal;color: #707070;">Sign in</div></th><!--模仿切换效果的样式-->
+    		<th style="border-bottom: 2px solid #6666C4;background-color: #FFFFFF;">Register</th><!--模仿切换效果的样式-->
+    	</tr>
+    	<tr>
+    		<td colspan="2" id="1" style="height: 555px;"><!--合并单元格-->
+    		<div>
+    		<form><!--表单-->
+    			<div  style="font-size: 13px;font-weight: 600;">
+    			Full name
+    			<br><input type="text"><!--输入文本-->
+    			<br>
+    	        Username
+    			<br><input type="text">
+    			<br>
+    			Email
+    			<br><input type="text">
+    			<br>
+    			Email confirmation 
+    			<br><input type="text">
+    			<br>
+    			Password
+    			<br><input type="password"><!--输入密码-->
+    			</div>
+    			<div style="font-size: 13px;font-weight: normal;line-height: 10px;>
+    		    <p id="word">Minimum length is 8 characters</p>
+    			<br>
+    			<input type="checkbox" style="width:15px;height:15px;margin-top: 0px;">I accept the <a href="https://gitlab.com/-/users/terms">Terms of Service and Privacy Policy </a><br>
+    			<br>
+    			<input type="checkbox" style="width:15px;height:15px;margin-top: 10px;" >I'd like to receive updates via email about GitLab.<br>
+    			</div>
+    		  <div class="button"> <!--大按钮-->
+              <a href="000">Register</a>
+    		  </div>
+    		 </form>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="width: 372px;height: 200px;position: absolute;left: 0px;top: 625px;"<!--单独设置表格行的样式-->
+    			<p style="font-size: 13px;font-weight: 600;position: absolute;top: 5px;left: 12px;">Sign in with </p>
+    			<div class="four"><!--四个小按钮-->
+                 <a href="000" style=" padding: 6px 66px 6px 43px;position: absolute;top: 44px;left: 8px;">
+                 <img src="1.png" width="22" height="22" style="position: absolute;left: 10px;"/>Google</a>
+                </div>
+                <div class="four">   
+                 <a href="000" style=" padding: 6px 69px 6px 43px;position: absolute;left: 193px;top: 44px;">
+                 <img src="2.png" width="23" height="23" style="position: absolute;left: 10px;"/>Twitter</a>  
+                </div>
+                <div class="four">
+                  <a href="000" style=" padding: 6px 68px 6px 43px;position: absolute;top: 100px;left: 8px;">
+                  <img src="3.png" width="22" height="22" style="position: absolute;left: 10px;"/>GitHub</a>  
+                </div>
+                <div class="four">
+                  <a href="000" style=" padding: 6px 50px 6px 43px;position: absolute;top: 100px;left: 193px;">
+                  <img src="4.png" width="23" height="23" style="position: absolute;left: 10px;"/>Bitbucket</a>  
+                </div>
+                </div>
+                <div style="font-size: 13px;">
+                <input type="checkbox" style="width:13px;height:13px;margin-top:150px;margin-left: 10px;">Remember me</div>
+    		</td>
+    	</tr>
+    </table>
+    </div>
+    </div>
+</body>
+</html>   
+ 
