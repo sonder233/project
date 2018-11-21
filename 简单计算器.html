@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<p id="myself"></p>
+		<script>
+			var me = {
+				name: "高龙",
+				height: "185cm",
+				IQ: "200"
+			};
+			document.getElementById("myself").innerHTML =
+				me["name"] + "<br>" + "身高" + me.height + "<br>" + "智商" + me.IQ;
+
+			function my(name, job) {
+				alert("welcome " + name + ",you are " + job);
+			}
+
+			function math(a, b) {
+				return a + b;
+			}
+
+			function just(x) {
+				var x = 5;
+				return x;
+			}
+
+			function hiahia(a, b) {
+				if(a > b) {
+					return;
+				}
+				x = a + b
+			}
+		</script>
+		<style>
+			table {
+				border: solid plum 2px;
+				background-color: mediumorchid;
+			}
+			
+			body {
+				background-color: paleturquoise
+			}
+		</style>
+	</head>
+
+	<body>
+		<button onclick="my('harry potter','wizard')">click</button>
+		<p id="count">hahaha</p>
+		<script>
+			document.getElementById("count").innerHTML = hiahia(1, 5);
+		</script>
+		<p>简单计算器</p><br>
+		<table id="table">
+			<tr>
+				<td>第一个数</td>
+				<td><input type="text" id="first" /></td>
+			</tr>
+			<tr>
+				<td>第二个数</td>
+				<td><input type="text" id="twice" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button style="width: inherit;" onclick="add()">+</button>&nbsp;
+					<button style="width: inherit;" onclick="subtract()">-</button>&nbsp;
+					<button style="width: inherit;" onclick="ride()">*</button>&nbsp;
+					<button style="width: inherit;" onclick="devide()">/</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p id="result"></p>
+				</td>
+			</tr>
+		</table>
+		<script>
+			var result1;
+			//加法
+			function add()
+			{
+				var a = getFirstNumber();
+				var b = getTwiceNumber();
+				var re =Number(a)+Number(b);
+				sendResult(re);
+			}
+			//减法
+			function subtract()
+			{
+				var a=getFirstNumber();
+				var b=getTwiceNumber();
+				var re=a-b;
+				sendResult(re);
+			}
+			//乘法
+			function ride()
+			{
+				var a=getFirstNumber();
+				var b=getTwiceNumber();
+				var re=a*b
+				sendResult(re);
+			}
+			//除法
+			function devide()
+			{
+				var a=getFirstNumber();
+				var b=getTwiceNumber();
+				var re=a/b;
+				sendResult(re);
+			}
+			 //给p标签传达数值
+			function sendResult(result1)   
+			{
+				var num =document.getElementById("result");
+				num.innerHTML = result1;
+			}
+			//获取第一个数
+			function getFirstNumber()        
+			{
+				var firstNumber=document.getElementById("first").value;
+				return firstNumber;
+			}
+			//获取第二个数
+			function getTwiceNumber()        
+			{
+				var twiceNumber=document.getElementById("twice").value;
+				return twiceNumber;
+			}
+		</script>
+	</body>
+
+</html>
