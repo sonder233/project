@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>对象</title>
+	</head>
+
+	<body>     
+		<p id="demo"></p>
+		<p id="lemon"></p><br>
+		<p>加了括号是这样的</p>
+		<p id="apple"></p><br>
+		<p>不加括号时这样的,把函数当作内容了</p>
+		<p id="banana"></p>
+		<script>    
+			var person =/*创建对象*/
+			{
+				firstName : "harry",
+				lastName : "potter",
+				eyeColor : "blue",
+				fullName : function(){
+					return this.firstName +"·"+ this.lastName;
+				}
+			};
+			
+			document.getElementById("demo").innerHTML=/*访问对象第一种*/
+			person.firstName +"·" + person.lastName+" have "+ person.eyeColor+" eyes";
+			
+			document.getElementById("lemon").innerHTML=
+			person["firstName"] +"·"+ person["lastName"] +" have "+ person["eyeColor"]+" eyes";
+			
+			document.getElementById("apple").innerHTML=person.fullName();/*对象方法作为一个函数定义存储在对象属性中*/
+			
+			//在对象里用函数的   .innerHTML=后面就和引入对象和变量一样，但是 需要写变量名称加上（），就类似于一个函数。
+			
+			document.getElementById("banana").innerHTML=person.fullName;
+			
+			
+		</script>
+	</body>
+
+</html>
