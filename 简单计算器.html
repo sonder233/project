@@ -110,22 +110,25 @@
 				var re=a/b;
 				sendResult(re);
 			}
-			 //给p标签传达数值
+			 //给p标签传达数值，这里指的是结果的那个p标签
 			function sendResult(result1)   
 			{
-				var num =document.getElementById("result");
+				var num =document.getElementById("result");  //这里的“result”是输出结果p标签的id
 				num.innerHTML = result1;
 			}
 			//获取第一个数
-			function getFirstNumber()        
+			function getFirstNumber()        //其实就是用了一个函数，可以理解成动态的就用函数，获取“first”里的数，
 			{
-				var firstNumber=document.getElementById("first").value;
+				var firstNumber=document.getElementById("first").value;  //这里的value应该是first里数值的意思，还没遇到过
+				                                                         //这里的first是第一个输入框的id
+				                                                         //把对象firstNumber换成first里的数值，然后return成firstNumber，这样这一整个fuction结果就是
+				                                                         //第一个input里的数值
 				return firstNumber;
 			}
 			//获取第二个数
 			function getTwiceNumber()        
 			{
-				var twiceNumber=document.getElementById("twice").value;
+				var twiceNumber=document.getElementById("twice").value;  //这里的twice是第二个输入框的id
 				return twiceNumber;
 			}
 		</script>
