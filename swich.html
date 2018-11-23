@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>星期</title>
+	</head>
+	<body>
+		<p>点击按钮获得今天星期几</p>
+		<button onclick="week()">点我点我</button>
+		<p id="demo"></p>
+		<script>
+			function week(){
+				var x;
+				var d=new Date().getDay();     //getDay获取星期几，getDate获取一个月的第几天
+				switch (d) {       //swich  （）中的变量与case进行比较
+				case 0:x="周一";
+				break;
+				case 1:x="周二";
+				break;
+				case 5:x="周五";
+				break;
+				}
+				document.getElementById("demo").innerHTML=x;
+			}
+		</script>
+		
+	</body>
+</html>
