@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>计时器</title>
+    <style>
+        #car {
+           width: 200px;
+           height: 150px;
+           position: absolute;
+           top: 100px;
+           left: 10px;
+           background-color: salmon;
+       }
+    </style>
+    <script>
+        var timer = null;
+        function StartMove() {
+            var Car = document.getElementById("car");
+            clearInterval(timer);
+            timer = setInterval(function () {
+                var Speed = 10;
+                if (Car.offsetLeft >= 600) {
+                    clearInterval(timer);
+                }
+                else {
+                    Car.style.left = Car.offsetLeft + Speed + 'px';
+                }
+
+            }, 30);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="开车了" onclick="StartMove()" />
+    <div id="car"></div>
+</body>
+
+</html>
