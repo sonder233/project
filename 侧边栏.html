@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>分享到侧边栏</title>
+    <style>
+        #Boom {
+            width: 100px;
+            height: 200px;
+            background: lightgreen;
+            position: absolute;
+            top: 200px;
+            left: -100px;
+        }
+     </style>
+    <script>
+        var timer = null;
+        function Out(Speed,Target) {    //两个相似的函数合并，谁不一样，谁设成参数
+            var Boom = document.getElementById("Boom");
+            clearInterval(timer);
+            timer = setInterval(function Apple() {
+                if (Boom.offsetLeft == Target) {
+                    clearInterval(timer);
+                }
+                else {
+                    Boom.style.left = Boom.offsetLeft + Speed + 'px';
+                }
+
+            }, 30);
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="侧边栏" onmouseover="Out(5,0)" onmouseout="Out(-5,-100)" />
+    <div id="Boom"></div>
+</body>
+
+</html>
