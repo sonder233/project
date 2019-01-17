@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        #picture {
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+        var timer = null;
+        var target = 0;
+        var opacity = 30;
+        window.onload = function () {
+            var mPic = document.getElementById("picture");
+            mPic.onmouseover = function () {
+                StartMove(100);
+            }
+            mPic.onmouseout = function () {
+                StartMove(30);
+            }
+        }
+
+        function StartMove(target) {
+            var mPic = document.getElementById("picture");
+            clearInterval(timer);
+            timer=setInterval(function () {
+                var Speed = 0;
+                if (opacity < target) {
+                    Speed = 5;
+                }
+                else {
+                    Speed = -5;
+                }
+
+                if (opacity == target) {
+                    clearInterval(timer);
+                }
+                else {
+                    opacity += Speed;
+                    mPic.style.opacity = opacity / 100;
+                    document.title = opacity;
+                }
+            }, 30)
+        }
+    </script>
+</head>
+
+<body>
+    <img src="img/eyes.jpg" id="picture">
+</body>
+
+</html>
