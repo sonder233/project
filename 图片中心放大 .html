@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>图片中心放大</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #eyes {
+            position: absolute;
+            top: 120px;
+            left: 330px;
+            z-index: 2;
+            opacity: 1;
+        }
+        #balls {
+            width: 330px;
+            height: 800px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+
+        }
+        #mask {
+            background: gray;
+            opacity: 0;
+            width: 960px;
+            height: 540px;
+            position: absolute;
+            top: 120px;
+            left: 330px;
+            z-index: 3;
+        }
+    </style>
+    <script type="text/javascript" src="完美运动框架.js"></script>
+    <script>
+        window.onload = function () {
+            var mImg = document.getElementById("eyes");
+            var mDiv = document.getElementById("mask");
+            mDiv.onmouseover = function () {
+                startMove(mDiv, { width: 1200, height: 800, marginLeft: -130, marginTop: -130, opacity: 30 })
+                startMove(mImg, { width: 1200, height: 800, marginLeft: -130, marginTop: -130 })
+            }
+            mDiv.onmouseout = function () {
+                startMove(mDiv, { width: 960, height: 540, marginLeft: 0, marginTop: 0, opacity: 0 })
+                startMove(mImg, { width: 960, height: 540, marginLeft: 0, marginTop: 0 })
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="mask"></div>
+    <img src="img/eyes.jpg" id="eyes">
+    <img src="img/balls.jpg" id="balls">
+</body>
+
+</html>
